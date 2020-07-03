@@ -15,6 +15,7 @@ RUN yum update && \
     yum clean all && \
     wget http://download.oray.com/sunlogin/linux/SunloginClient-10.0.2.24779_amd64.deb && \
     tar xzvf SunloginClient-10.0.2.24779_amd64.deb && \
+    rm SunloginClient-10.0.2.24779_amd64.deb && \
     cd sunloginclient && \
     ./run.sh
     
