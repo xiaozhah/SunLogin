@@ -6,7 +6,10 @@ ENV REFRESHED_AT 2018-03-18
 # Switch to root user to install additional software
 USER 0
 
-## Install a gedit
+ENV SunLogin_PORT=30080
+EXPOSE $SunLogin_PORT
+
+## Install software
 RUN yum update
     yum install -y htop && \
     yum clean all && \
