@@ -10,7 +10,7 @@ ENV SunLogin_PORT=30080
 EXPOSE $SunLogin_PORT
 
 ## Install software
-RUN yum update
+RUN yum update && \
     yum install -y htop && \
     yum clean all && \
     wget http://download.oray.com/sunlogin/linux/SunloginClient-10.0.2.24779_amd64.deb && \
